@@ -5,6 +5,9 @@
 
 static iio_context *ctx = nullptr;
 
+/* static scratch mem for strings */
+static char tmpstr[64];
+
 /* helper function generating channel names */
 static char* get_ch_name(const char* type, int id)
 {
@@ -118,7 +121,7 @@ SoapySDR::Kwargs SoapyPlutoSDR::getHardwareInfo( void ) const
 
 size_t SoapyPlutoSDR::getNumChannels( const int dir ) const
 {
-	return(1);
+	return(2);
 }
 
 bool SoapyPlutoSDR::getFullDuplex( const int direction, const size_t channel ) const

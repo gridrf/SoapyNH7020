@@ -7,6 +7,8 @@
 #include <algorithm> 
 #include <chrono>
 
+/* static scratch mem for strings */
+static char tmpstr[64];
 //TODO: Need to be a power of 2 for maximum efficiency ?
 # define DEFAULT_RX_BUFFER_SIZE (1 << 16)
 /* helper function generating channel names */
